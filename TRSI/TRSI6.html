@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 20px;
+    height: 15px;
+    background: red;
+    transition: width 3s, height 3s, transform 3s;
+    animation-name: example;
+    animation-duration: 7s;
+    animation-iteration-count: 30;
+}
+
+div:hover {
+    transform: rotate(180deg);
+    width: 200px;
+}
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; }
+    20%  {background-color:purple;}
+    40%  {background-color:blue; }
+    60%  {background-color:green;}
+    80%  {background-color:yellow;}
+    100% {background-color:orange;}
+}
+</style>
+</head>
+<body>
+
+<p>Betsey Delorey CIT261</p>
+
+<div></div>
+
+<p>Hover over the div for see cool underline.</p>
+
+</body>
+</html>
+

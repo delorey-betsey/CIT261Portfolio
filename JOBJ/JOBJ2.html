@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+var person = {
+    firstName: "John",
+    age : 50,
+    bio : function() {
+       return this.firstName + " is " + this.age + " years old.";
+    }
+};
+
+document.getElementById("demo").innerHTML = person.bio();
+</script>
+
+</body>
+</html>

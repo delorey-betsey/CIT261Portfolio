@@ -1,0 +1,62 @@
+<html>
+   <head>
+      <title>Creation of array object in javascript using JSON</title>
+		
+      <script language = "javascript" >
+
+         document.writeln("<h2>JSON Array Object</h2>");
+
+         var family = { "Boys" : [ 
+            { "Name"  : "Kevin", "Age" : 61 },
+            { "Name"  : "Dan", "Age" : 37 },
+			{ "Name"  : "Andrew", "Age" : 00 },
+			{ "Name"  : "Edward", "Age" : 34 },
+			{ "Name"  : "Mark", "Age" : 31 },
+			{ "Name"  : "Charles", "Age" : 28 },
+			{ "Name"  : "James", "Age" : 25 }], 
+				
+            "Girls"  : [
+               { "Name"  : "Betsey", "Age" : 60 }, 
+               { "Name"  : "Natalie", "Age" : 34 },
+			   { "Name"  : " ", "Age" : 00 },
+			   { "Name"  : "FLStef", "Age" : 31 },
+			   { "Name"  : "CAStef", "Age" : 31 },
+			   { "Name"  : "Kaylee", "Age" : 22 },
+			   { "Name"  : "Katie", "Age" : 25 }]    
+         }    
+		 
+         var i = 0
+         document.writeln("<table border = '2'><tr>");
+			
+         for(i = 0;i<family.Boys.length;i++){	
+            document.writeln("<td>");
+            document.writeln("<table border = '1' width = 100 >");
+            document.writeln("<tr><td><b>Name</b></td><td width = 50>" + family.Boys[i].Name+"</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td width = 50>" + family.Boys[i].Age +"</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+         }
+		 document.writeln("</tr></table>");
+
+		 var i = 0
+         document.writeln("<table border = '2'><tr>");
+		 
+         for(i = 0;i<family.Girls.length;i++){
+            document.writeln("<td>");
+            document.writeln("<table border = '1' width = 100 >");
+            document.writeln("<tr><td><b>Name</b></td><td width = 50>" + family.Girls[i].Name+"</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td width = 50>" + family.Girls[i].Age+"</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+         }
+			
+         document.writeln("</tr></table>");
+
+      </script>
+
+   </head>
+	
+   <body>
+   </body>
+	
+</html>

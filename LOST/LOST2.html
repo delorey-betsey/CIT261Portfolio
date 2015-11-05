@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>localStorage Test</title>
+    
+    <script>
+      var fieldValue = '';
+      function save(){
+        var fieldValue = document.getElementById('textfield').value;
+        localStorage.setItem('text',fieldValue);
+      }
+      
+      function load() {
+        var storedValue = localStorage.getItem('text');
+        if (storedValue) {
+          document.getElementById('textfield').value = storedValue;
+        }     
+      }
+      function deleteElem(){
+        document.getElementById('textfield').value = '';
+        localStorage.removeItem('text');
+      }
+    </script>
+  </head>
+
+  <body onload="load()">
+    <input type="text" id="textfield"/>
+    <input type="button" value="save" onclick="save()"/>
+    <input type="button" value="remove" onclick="deleteElem()"/>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Modifying an image border width and color</title>
+	<script>
+		function setBorderWidth(width) {
+		  document.getElementById("img1").style.borderWidth = width + "px";
+		}
+		function setBorderColor(color) {
+		  document.getElementById("img1").style.borderColor = color;
+		}
+	</script>
+</head>
+
+<body>
+<p>
+  <img id="img1"
+       src="http://dreamatico.com/data_images/kitten/kitten-1.jpg"
+       style="border: 5px solid green;"
+       width="304" height="245" alt="border test">
+</p>
+
+<form name="FormName">
+  <input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" />
+  <input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" />
+  <input type="button" value="Make border red"  	onclick="setBorderColor('red');" />
+  <input type="button" value="Make border blue"  	onclick="setBorderColor('blue');" />
+</form>
+
+</body>
+</html>

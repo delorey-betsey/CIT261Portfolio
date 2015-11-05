@@ -1,0 +1,4 @@
+<p>Betsey Delorey CIT261 Sandbox--Welcome!.</p>
+<br>
+<p>AJAX is not a new programming language.</p>
+<p>AJAX is a technique for creating fast and dynamic web pages.</p>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+        <meta charset="UTF-8">
+        <title>JSON Data Serialization</title>
+        
+        <script>
+            function deserialize(){
+                var sFirstName = document.getElementById("fname").value;
+                var sLastName = document.getElementById("lname").value;
+                var iAge = document.getElementById("age").value;
+                var sEmail = document.getElementById("email").value;
+                
+                //Used to generate a JSON string. 
+                //It takes other options as described in the portfolio page
+                var sJson = JSON.stringify({ FirstName : sFirstName, LastName : sLastName, Age : iAge, Email : sEmail });
+                
+                document.getElementById("divSerializedOutput").innerHTML = sJson;
+                
+                //parse the string deserialize the object into a JSON object
+                var myJsonObj = JSON.parse(sJson);
+                
+                // display the deserialized result
+                document.getElementById("divDeserializedOutput").innerHTML = 
+                        myJsonObj.FirstName + '<br>' +
+                        myJsonObj.LastName + '<br>' +
+                        myJsonObj.Age + '<br>' +
+                        myJsonObj.Email
+            }
+        </script>
+  </head>
+  <body id="body">
+    <div>
+      <div>
+        <div class="logo">
+        
+            <h1>Betsey Delorey</h1>
+            <h2>CIT261 JSON Serialization</h2>
+            <hr>
+        </div>
+    
+        <p>Example of JSON Serialization and Deserialization</p>
+        
+        <p>This example will take the input to the fields below, stringify, then deserialize the stringified string into a JSON object.</p>
+        
+        <p>Enter data in the fields below:</p>
+        
+        <table>
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input id="fname" type="text"><br></td>
+            </tr>
+             <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input id="lname" type="text"><br></td>
+            </tr>
+             <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input id="age" type="number"><br></td>
+            </tr>
+             <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input id="email" type="email"></td>
+            </tr>
+        </table>
+        
+        <br>
+        <button id="btnProcess" type="button" onclick="deserialize()">Serialize/Deserialize</button>
+        <p>JSON String:</p>
+        <br>
+        <div id="divSerializedOutput" class="code"></div>
+        <br>
+        <p>JSON Object Output:</p>
+        <br>
+        <div id="divDeserializedOutput" class="code"></div>
+        <br>
+        
+      </div>
+    </body>
+</html>
+
