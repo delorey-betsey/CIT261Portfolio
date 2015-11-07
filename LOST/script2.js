@@ -5,8 +5,7 @@ alert("personObj from script2 ="
 		+ " " + personObj.lastName 
 		+ " " + personObj.age);
 		
-localStorage.clear(personObj);
-localStorage.clear(person);	
+
 
 
 
